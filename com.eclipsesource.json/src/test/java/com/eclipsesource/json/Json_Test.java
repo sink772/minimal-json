@@ -24,9 +24,9 @@ package com.eclipsesource.json;
 import static com.eclipsesource.json.TestUtil.assertException;
 import static org.junit.Assert.*;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
+import scorex.io.IOException;
+import scorex.io.Reader;
+import scorex.io.StringReader;
 
 import org.junit.Test;
 

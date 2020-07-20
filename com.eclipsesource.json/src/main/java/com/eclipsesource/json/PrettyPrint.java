@@ -21,8 +21,8 @@
  ******************************************************************************/
 package com.eclipsesource.json;
 
-import java.io.IOException;
-import java.io.Writer;
+import scorex.io.IOException;
+import scorex.io.Writer;
 import java.util.Arrays;
 
 

@@ -25,11 +25,11 @@ import static com.eclipsesource.json.TestUtil.assertException;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
-import java.io.StringWriter;
-import java.io.Writer;
+import scorex.io.IOException;
+import scorex.io.Reader;
+import scorex.io.StringReader;
+import scorex.io.StringWriter;
+import scorex.io.Writer;
 
 import org.junit.Test;
 

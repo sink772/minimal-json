@@ -21,15 +21,14 @@
  ******************************************************************************/
 package com.eclipsesource.json;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.Reader;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 import com.eclipsesource.json.JsonObject.Member;
+import scorex.io.IOException;
+import scorex.io.Reader;
+import scorex.util.ArrayList;
 
 
 /**
@@ -804,13 +803,13 @@ public class JsonObject extends JsonValue implements Iterable<Member> {
     return names.lastIndexOf(name);
   }
 
-  private synchronized void readObject(ObjectInputStream inputStream)
-      throws IOException, ClassNotFoundException
-  {
-    inputStream.defaultReadObject();
-    table = new HashIndexTable();
-    updateHashIndex();
-  }
+//  private synchronized void readObject(ObjectInputStream inputStream)
+//      throws IOException, ClassNotFoundException
+//  {
+//    inputStream.defaultReadObject();
+//    table = new HashIndexTable();
+//    updateHashIndex();
+//  }
 
   private void updateHashIndex() {
     int size = names.size();

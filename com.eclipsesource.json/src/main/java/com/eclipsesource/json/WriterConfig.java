@@ -21,7 +21,7 @@
  ******************************************************************************/
 package com.eclipsesource.json;
 
-import java.io.Writer;
+import scorex.io.Writer;
 
 
 /**

@@ -21,8 +21,8 @@
  ******************************************************************************/
 package com.eclipsesource.json;
 
-import java.io.IOException;
-import java.io.Reader;
+import scorex.io.IOException;
+import scorex.io.Reader;
 
 
 /**

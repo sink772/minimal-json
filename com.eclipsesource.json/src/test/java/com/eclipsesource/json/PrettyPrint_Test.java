@@ -26,9 +26,9 @@ import static java.util.Locale.US;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
+import scorex.io.IOException;
+import scorex.io.StringWriter;
+import scorex.io.Writer;
 
 import org.junit.Before;
 import org.junit.Test;

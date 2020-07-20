@@ -25,8 +25,8 @@ import static com.eclipsesource.json.TestUtil.assertException;
 import static com.eclipsesource.json.TestUtil.serializeAndDeserialize;
 import static org.junit.Assert.*;
 
-import java.io.IOException;
-import java.io.StringWriter;
+import scorex.io.IOException;
+import scorex.io.StringWriter;
 
 import org.junit.Before;
 import org.junit.Test;

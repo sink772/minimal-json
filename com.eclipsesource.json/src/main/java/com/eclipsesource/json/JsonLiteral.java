@@ -21,7 +21,7 @@
  ******************************************************************************/
 package com.eclipsesource.json;
 
-import java.io.IOException;
+import scorex.io.IOException;
 
 
 @SuppressWarnings("serial") // use default serial UID
