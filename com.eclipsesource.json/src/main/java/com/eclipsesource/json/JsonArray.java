@@ -21,13 +21,13 @@
  ******************************************************************************/
 package com.eclipsesource.json;
 
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
 import scorex.io.IOException;
 import scorex.io.Reader;
 import scorex.util.ArrayList;
+import scorex.util.Collections;
 
 
 /**
