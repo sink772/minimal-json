@@ -1,5 +1,8 @@
-apply plugin: 'java'
-apply plugin: 'maven-publish'
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.8.5'
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
@@ -11,8 +14,40 @@ dependencies {
     testImplementation 'org.mockito:mockito-core:3.3.3'
 }
 
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier 'javadoc'
+    from javadoc.destinationDir
+}
+
+def projectName = 'minimal-json'
+def repoUrl = 'https://github.com/sink772/minimal-json'
 def snapshotSuffix = rootProject.hasProperty('release') ? '' : '-SNAPSHOT'
 version = '0.9.5' + snapshotSuffix
+
+def pomConfig = {
+    licenses {
+        license {
+            name "MIT License"
+            url "https://opensource.org/licenses/MIT"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "sink772"
+            name "Jaechang Namgoong"
+            email "sink772@gmail.com"
+        }
+    }
+    scm {
+        url repoUrl
+    }
+}
 
 publishing {
     repositories {
@@ -29,8 +64,40 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             groupId = 'com.github.sink772'
-            artifactId = 'minimal-json'
+            artifactId = projectName
             from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('name', projectName)
+                root.appendNode('description', 'A minimal JSON parser and writer for Java SCORE')
+                root.appendNode('url', repoUrl)
+                root.children().last() + pomConfig
+            }
+        }
+    }
+}
+
+bintray {
+    user = rootProject.hasProperty('bintrayUser') ? "$bintrayUser" : ''
+    key = rootProject.hasProperty('bintrayKey') ? "$bintrayKey" : ''
+    publications = ['mavenJava']
+    publish = true
+    pkg {
+        repo = projectName
+        name = projectName
+        licenses = ['MIT']
+        vcsUrl = 'https://github.com/sink772/minimal-json.git'
+        version {
+            name = project.version
+            gpg {
+                sign = true
+            }
+            mavenCentralSync {
+                user = rootProject.hasProperty('mavenCentralUser') ? "$mavenCentralUser" : ''
+                password = rootProject.hasProperty('mavenCentralPass') ? "$mavenCentralPass" : ''
+            }
         }
     }
 }
