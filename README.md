@@ -1,5 +1,7 @@
 # minimal-json for Java SCORE
 
+[ ![Download](https://api.bintray.com/packages/sink772/minimal-json/minimal-json/images/download.svg?version=0.9.5) ](https://bintray.com/sink772/minimal-json/minimal-json/0.9.5/link)
+
 This is a forked project that allows users to utilize the `minimal-json` parser and writer in their Java SCORE code.
 Please see [original GitHub repository](https://github.com/ralfstx/minimal-json) for more information.
 
