@@ -96,10 +96,6 @@ bintray {
             gpg {
                 sign = true
             }
-            mavenCentralSync {
-                user = rootProject.hasProperty('mavenCentralUser') ? "$mavenCentralUser" : ''
-                password = rootProject.hasProperty('mavenCentralPass') ? "$mavenCentralPass" : ''
-            }
         }
     }
 }
