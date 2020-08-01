@@ -29,7 +29,7 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 def projectName = 'minimal-json'
 def repoUrl = 'https://github.com/sink772/minimal-json'
 def snapshotSuffix = rootProject.hasProperty('release') ? '' : '-SNAPSHOT'
-version = '0.9.5' + snapshotSuffix
+version = VERSION + snapshotSuffix
 
 def pomConfig = {
     licenses {
@@ -65,7 +65,7 @@ publishing {
     }
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'com.github.sink772'
+            groupId = GROUP
             artifactId = projectName
             from components.java
             artifact sourcesJar
@@ -85,7 +85,6 @@ bintray {
     user = rootProject.hasProperty('bintrayUser') ? "$bintrayUser" : ''
     key = rootProject.hasProperty('bintrayKey') ? "$bintrayKey" : ''
     publications = ['mavenJava']
-    publish = true
     pkg {
         repo = projectName
         name = projectName
