@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/sink772/minimal-json/minimal-json/images/download.svg) ](https://bintray.com/sink772/minimal-json/minimal-json/_latestVersion)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.sink772/minimal-json/badge.svg)](https://search.maven.org/search?q=g:com.github.sink772%20a:minimal-json)
 
 # minimal-json for Java SCORE
 
@@ -7,7 +7,8 @@ Please see [original GitHub repository](https://github.com/ralfstx/minimal-json)
 
 ## Usage
 
-You can include this custom `minimal-json` from JCenter by adding the following dependency in your `build.gradle`.
+You can include this custom `minimal-json` from [Maven Central](https://search.maven.org/search?q=g:com.github.sink772%20a:minimal-json)
+by adding the following dependency in your `build.gradle`.
 
 ```groovy
 implementation 'com.github.sink772:minimal-json:0.9.6'
