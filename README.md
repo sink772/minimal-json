@@ -11,7 +11,7 @@ You can include this custom `minimal-json` from [Maven Central](https://search.m
 by adding the following dependency in your `build.gradle`.
 
 ```groovy
-implementation 'com.github.sink772:minimal-json:0.9.6'
+implementation 'com.github.sink772:minimal-json:0.9.7'
 ```
 
 ## License
